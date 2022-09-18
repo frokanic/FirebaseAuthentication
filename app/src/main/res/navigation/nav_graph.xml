@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentLogin">
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.firebaseauthentication.ui.fragments.FragmentLogin"
+        android:label="FragmentLogin" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentRegistration"
+            app:destination="@id/fragmentRegistration" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegistration"
+        android:name="com.example.firebaseauthentication.ui.fragments.FragmentRegistration"
+        android:label="FragmentRegistration" >
+        <action
+            android:id="@+id/action_fragmentRegistration_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+</navigation>

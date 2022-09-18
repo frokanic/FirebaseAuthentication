@@ -1,8 +1,10 @@
-package com.example.firebaseauthentication
+package com.example.firebaseauthentication.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.firebaseauthentication.ui.fragments.FragmentLogin
+import com.example.firebaseauthentication.R
 import com.example.firebaseauthentication.databinding.ActivityMainBinding
 
 
@@ -15,13 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        changeFragment(FragmentLogin())
     }
 
-    private fun changeFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply{
-            replace(R.id.flFragment, fragment)
-            commit()
-        }
-    }
+
 }
