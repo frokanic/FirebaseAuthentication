@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Email"
         android:drawableLeft="@drawable/ic_person"
         android:drawableTint="@color/white"
         android:inputType="textPersonName"

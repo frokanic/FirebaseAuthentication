@@ -37,11 +37,12 @@ class FragmentLogin: Fragment(R.layout.fragment_login) {
 
     private fun loginUser() {
         binding.btnLogin.setOnClickListener {
-            val email = binding.etInputUsername.text.toString()
-            val password = binding.etInputPassword.text.toString()
+            val email = binding.etInputUsername.text.toString().lowercase().trim()
+            val password = binding.etInputPassword.text.toString().trim()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-
+                repository.loginUser(email, password)
+                findNavController().navigate(R.id.action_fragmentLogin_to_fragmentLoggedIn)
             }
         }
     }
